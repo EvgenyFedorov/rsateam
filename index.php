@@ -10,11 +10,3 @@ require(__DIR__ . '/vendor/yiisoft/yii2/Yii.php');
 $config = require(__DIR__ . '/config/web.php');
 
 (new yii\web\Application($config))->run();
-
-// Комментарий к измененному файлу
-
-// новое изменение файла index.php
-
-// Очередной комментарий посте коммита
-
-// Четвертый комметарий

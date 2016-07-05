@@ -1,9 +1,8 @@
 <h1><?=$hello_header; ?></h1>
-<p>
-    <ul>
-        <?php foreach ($hello_content as $item): ?>
-            <li><?php echo $item->title ?></li>
-        <?php endforeach ?>
-
-    </ul>
-</p>
+<div>
+    <?php foreach ($hello_content as $item): ?>
+        <p>
+            <a href="/site/view/<?php echo $item->id ?>"><?php echo $item->title ?></a>
+        </p>
+    <?php endforeach ?>
+</div>

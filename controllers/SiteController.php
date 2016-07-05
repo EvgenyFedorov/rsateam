@@ -21,9 +21,9 @@ class SiteController extends Controller
     {
         return $this->render('index');
     }
-    public function actionView(){
+    public function actionView($id){
 
-        $array_content = MyList::getOne();
+        $array_content = MyList::getOne($id);
 
         return $this->render('view', ['view_content' => $array_content]);
 

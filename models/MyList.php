@@ -4,6 +4,14 @@ namespace app\models;
 
 Class MyList extends \yii\db\ActiveRecord{
 
+    public function rules(){
+
+        return [
+            [['title', 'description'], 'required'],
+        ];
+
+    }
+
     public static function tableName(){
 
         return 'list';
@@ -16,9 +24,9 @@ Class MyList extends \yii\db\ActiveRecord{
         return $array_content;
 
     }
-    public static function getOne(){
+    public static function getOne($id){
 
-        $array_content = self::find()->where(['id'=>1])->one();
+        $array_content = self::find()->where(['id'=>$id])->one();
 
         return $array_content;
 
